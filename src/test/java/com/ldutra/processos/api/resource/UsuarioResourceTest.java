@@ -1,6 +1,5 @@
 package com.ldutra.processos.api.resource;
 
-
 import java.math.BigDecimal;
 import java.util.Optional;
 
@@ -43,7 +42,7 @@ public class UsuarioResourceTest {
 	UsuarioService service;
 	
 	@MockBean
-	ProcessoService processoService;
+	ProcessoService lancamentoService;
 	
 	@Test
 	public void deveAutenticarUmUsuario() throws Exception {
@@ -159,6 +158,8 @@ public class UsuarioResourceTest {
 		;
 		
 	}
+	
+
 	
 
 

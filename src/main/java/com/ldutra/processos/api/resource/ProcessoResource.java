@@ -26,7 +26,6 @@ import com.ldutra.processos.service.UsuarioService;
 
 import lombok.RequiredArgsConstructor;
 
-
 @RestController
 @RequestMapping("/api/processos")
 @RequiredArgsConstructor
@@ -37,14 +36,14 @@ public class ProcessoResource {
 	
 	@GetMapping
 	public ResponseEntity buscar(
-			@RequestParam(value ="descricao" , required = false) String descricao,
+			@RequestParam(value ="parecer" , required = false) String parecer,
 			@RequestParam(value = "mes", required = false) Integer mes,
 			@RequestParam(value = "ano", required = false) Integer ano,
 			@RequestParam("usuario") Long idUsuario
 			) {
 		
 		Processo processoFiltro = new Processo();
-		processoFiltro.setParecer(descricao);
+		processoFiltro.setParecer(parecer);
 		processoFiltro.setMes(mes);
 		processoFiltro.setAno(ano);
 		

@@ -9,17 +9,17 @@ import com.ldutra.processos.model.enums.StatusProcesso;
 
 public interface ProcessoService {
 
-	Processo salvar(Processo lancamento);
+	Processo salvar(Processo processo);
 	
-	Processo atualizar(Processo lancamento);
+	Processo atualizar(Processo processo);
 	
-	void deletar(Processo lancamento);
+	void deletar(Processo processo);
 	
-	List<Processo> buscar( Processo lancamentoFiltro );
+	List<Processo> buscar( Processo processoFiltro );
 	
-	void atualizarStatus(Processo lancamento, StatusProcesso status);
+	void atualizarStatus(Processo processo, StatusProcesso status);
 	
-	void validar(Processo lancamento);
+	void validar(Processo processo);
 	
 	Optional<Processo> obterPorId(Long id);
 	

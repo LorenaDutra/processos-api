@@ -16,7 +16,7 @@ import com.ldutra.processos.api.dto.UsuarioDTO;
 import com.ldutra.processos.exception.ErroAutenticacao;
 import com.ldutra.processos.exception.RegraNegocioException;
 import com.ldutra.processos.model.entity.Usuario;
-//import com.ldutra.processos.service.ProcessoService;
+import com.ldutra.processos.service.ProcessoService;
 import com.ldutra.processos.service.UsuarioService;
 
 import lombok.RequiredArgsConstructor;
@@ -24,11 +24,10 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/usuarios")
 @RequiredArgsConstructor
-
 public class UsuarioResource {
 
 	private final UsuarioService service;
-	
+	private final ProcessoService processoService;
 	
 	@PostMapping("/autenticar")
 	public ResponseEntity autenticar( @RequestBody UsuarioDTO dto ) {
@@ -57,6 +56,6 @@ public class UsuarioResource {
 		
 	}
 	
-
+	
 
 }

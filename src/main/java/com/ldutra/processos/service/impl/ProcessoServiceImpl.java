@@ -80,9 +80,6 @@ public class ProcessoServiceImpl implements ProcessoService {
 			throw new RegraNegocioException("Informe um Ano válido.");
 		}
 		
-		if(processo.getUsuario() == null || processo.getUsuario().getId() == null) {
-			throw new RegraNegocioException("Informe um Usuário.");
-		}
 		
 		
 	}

@@ -1,5 +1,6 @@
 package com.ldutra.processos.api.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,9 +12,11 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class UsuarioDTO {
 
 	private String email;
 	private String nome;
 	private String senha;
+	
 }

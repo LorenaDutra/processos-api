@@ -1,6 +1,5 @@
 package com.ldutra.processos.service;
 
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.assertj.core.api.Assertions.catchThrowableOfType;
@@ -240,29 +239,11 @@ public class ProcessoServiceTest {
 		erro = catchThrowable( () -> service.validar(processo) );
 		assertThat(erro).isInstanceOf(RegraNegocioException.class).hasMessage("Informe um Ano válido.");
 		
-		processo.setAno(2020);
 		
-		erro = catchThrowable( () -> service.validar(processo) );
-		assertThat(erro).isInstanceOf(RegraNegocioException.class).hasMessage("Informe um Usuário.");
 		
-		processo.setUsuario(new Usuario());
-		
-		erro = catchThrowable( () -> service.validar(processo) );
-		assertThat(erro).isInstanceOf(RegraNegocioException.class).hasMessage("Informe um Usuário.");
-		
-		processo.getUsuario().setId(1l);
-		
-		erro = catchThrowable( () -> service.validar(processo) );
-		assertThat(erro).isInstanceOf(RegraNegocioException.class).hasMessage("Informe um Valor válido.");
-		
-	
-		
-		erro = catchThrowable( () -> service.validar(processo) );
-		assertThat(erro).isInstanceOf(RegraNegocioException.class).hasMessage("Informe um tipo de Lançamento.");
 		
 	}
 	
-	
+
 	
 }
-

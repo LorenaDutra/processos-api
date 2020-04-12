@@ -19,13 +19,10 @@ import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import com.ldutra.processos.model.enums.StatusProcesso;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-
 
 @Entity
 @Table(name = "processo", schema = "processo")
@@ -33,8 +30,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Processo {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -52,14 +49,17 @@ public class Processo {
 	@ManyToOne
 	@JoinColumn(name = "id_usuario")
 	private Usuario usuario;
-
+	
+	
 	@Column(name = "data_cadastro")
 	@Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
 	private LocalDate dataCadastro;
 	
+	
 	@Column(name = "status")
 	@Enumerated(value = EnumType.STRING)
 	private StatusProcesso status;
+
 
 	
 

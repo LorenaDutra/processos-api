@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
+@EnableWebMvc
 public class ProcessosApplication implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
